@@ -3,3 +3,4 @@ from django.db import models
 class Scar(models.Model):
     'Generated Model'
     scarName = models.CharField(max_length=256,)
+    jagField = models.CharField(max_length=256,null=True,blank=True,)
