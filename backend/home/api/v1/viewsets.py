@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Scar
-from .serializers import ScarSerializer
+from home.models import Scar,Voke
+from .serializers import ScarSerializer,VokeSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class ScarViewSet(viewsets.ModelViewSet):
     serializer_class = ScarSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Scar.objects.all()
+
+class VokeViewSet(viewsets.ModelViewSet):
+    serializer_class = VokeSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Voke.objects.all()

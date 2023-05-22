@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Scar
+from home.models import Scar,Voke
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,10 @@ class ScarSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Scar
+        fields = "__all__"
+
+class VokeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Voke
         fields = "__all__"
